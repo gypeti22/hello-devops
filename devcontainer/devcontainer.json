@@ -1,7 +1,7 @@
 {
     "name": "Hello DevOps PHP",
     "build": {
-        "dockerfile": "Dockerfile"
+        "dockerfile": "../Dockerfile"
     },
     "appPort": [8080],
     "runArgs": ["-p", "8080:8080"],
