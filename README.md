@@ -1,21 +1,34 @@
-# Hello DevOps - PHP
+# Hello PHP App
 
-Minimal PHP "Hello world" app suitable for the DevOps assignment.
+Egyszerű „Hello World” PHP alkalmazás Docker és GitHub Codespaces támogatással.
 
-## Build
-Build the Docker image:
+## Projekt struktúra
 
-```bash
-docker build -t hello-devops-php:v1 .
+hello-devops/
+├── index.php # Alkalmazás fő fájlja
+├── Dockerfile # Main Dockerfile az app futtatásához
+├── README.md # Ez a dokumentáció
+└── .devcontainer/
+├── Dockerfile # Dev Container Dockerfile
+└── devcontainer.json # Codespaces / Dev Container konfiguráció
 
-## Dev Container
+yaml
+Kód másolása
 
-A projekt futtatható VS Code Dev Containerben:
+---
 
-1. Nyisd meg a projektet VS Code-ban.
-2. Telepítsd a "Remote - Containers" kiterjesztést, ha még nincs.
-3. Válaszd a `Reopen in Container` opciót.
-4. A konténer automatikusan buildeli az appot és futtatja:
-   ```bash
-   docker build -t hello-devops-php:v1 .
-   docker run -p 8080:8080 hello-devops-php:v1
+## 1️⃣ Main Docker build és futtatás
+
+1. Build:
+
+docker build -t hello-php:v1 .
+Futtatás:
+
+
+docker run -p 8080:80 hello-php:v1
+Böngészőben ellenőrzés:
+
+
+
+http://localhost:8080
+Meg kell jelenjen a "Hello DevOps - PHP! Running on Docker." szöveg.

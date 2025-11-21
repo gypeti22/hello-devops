@@ -1,3 +1,8 @@
+# Base image
 FROM php:8.2-apache
-COPY . /var/www/html
+
+# Másoljuk az appot a konténerbe
+COPY . /var/www/html/
+
+# Port beállítása
 EXPOSE 80

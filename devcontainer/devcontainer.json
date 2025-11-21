@@ -1,17 +1,16 @@
 {
-    "name": "Hello DevOps PHP",
-    "build": {
-        "dockerfile": "../Dockerfile"
-    },
-    "appPort": [8080],
-    "runArgs": ["-p", "8080:8080"],
-    "workspaceFolder": "/workspace",
-    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-    "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
-    },
-    "extensions": [
-        "felixfbecker.php-debug",
-        "bmewburn.vscode-intelephense-client"
-    ]
+  "name": "PHP Hello World Codespaces",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "workspaceFolder": "/workspace",
+  "extensions": [
+    "felixfbecker.php-debug",
+    "bmewburn.vscode-intelephense-client"
+  ],
+  "forwardPorts": [80],
+  "settings": {
+    "php.validate.executablePath": "/usr/local/bin/php"
+  }
 }
