@@ -6,5 +6,5 @@ RUN apt-get update && apt-get install -y git unzip nano vim
 # Port forward
 EXPOSE 80
 
-# Munka könyvtár
+# Munka könyvtár a Codespaces-hez
 WORKDIR /workspace

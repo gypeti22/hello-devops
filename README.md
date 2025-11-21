@@ -5,30 +5,28 @@ Egyszerű „Hello World” PHP alkalmazás Docker és GitHub Codespaces támoga
 ## Projekt struktúra
 
 hello-devops/
-├── index.php # Alkalmazás fő fájlja
-├── Dockerfile # Main Dockerfile az app futtatásához
-├── README.md # Ez a dokumentáció
+├── index.php
+├── Dockerfile
+├── README.md
 └── .devcontainer/
-├── Dockerfile # Dev Container Dockerfile
-└── devcontainer.json # Codespaces / Dev Container konfiguráció
+├── Dockerfile
+└── devcontainer.json
 
-yaml
 Kód másolása
 
 ---
 
-## 1️⃣ Main Docker build és futtatás
-
-1. Build:
+## Main Docker build és futtatás (helyileg)
 
 docker build -t hello-php:v1 .
-Futtatás:
-
-
 docker run -p 8080:80 hello-php:v1
-Böngészőben ellenőrzés:
+Böngészőben: http://localhost:8080
 
-
-
-http://localhost:8080
-Meg kell jelenjen a "Hello DevOps - PHP! Running on Docker." szöveg.
+Git workflow
+bash
+Kód másolása
+# Ellenőrizd a branch-t
+git status
+git add .
+git commit -m "Update Dockerfile and README for Codespaces"
+git push origin main
