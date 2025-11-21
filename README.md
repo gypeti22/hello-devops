@@ -5,14 +5,12 @@ Egyszerű „Hello World” PHP alkalmazás Docker és GitHub Codespaces támoga
 ## Projekt struktúra
 
 hello-devops/
-├── index.php
-├── Dockerfile
-├── README.md
-└── .devcontainer/
-├── Dockerfile
-└── devcontainer.json
+-index.php
+-Dockerfile
+-README.md
+.devcontainer/Dockerfile
+-devcontainer.json
 
-Kód másolása
 
 ---
 
